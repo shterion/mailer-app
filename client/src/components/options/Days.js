@@ -25,25 +25,25 @@ class Days extends React.Component {
 	render() {
 		return (
 			<div>
-				<ToggleButton id="0" name="mon" value="check" onClick={this.setSelected} selected={this.state.mon}>
+				<ToggleButton id="1" name="mon" value="check" onClick={this.setSelected} selected={this.state.mon}>
 					Mon
 				</ToggleButton>
-				<ToggleButton id="1" name="tue" value="check" onClick={this.setSelected} selected={this.state.tue}>
+				<ToggleButton id="2" name="tue" value="check" onClick={this.setSelected} selected={this.state.tue}>
 					Tue
 				</ToggleButton>
-				<ToggleButton id="2" name="wed" value="check" onClick={this.setSelected} selected={this.state.wed}>
+				<ToggleButton id="3" name="wed" value="check" onClick={this.setSelected} selected={this.state.wed}>
 					Wed
 				</ToggleButton>
-				<ToggleButton id="3" name="thu" value="check" onClick={this.setSelected} selected={this.state.thu}>
+				<ToggleButton id="4" name="thu" value="check" onClick={this.setSelected} selected={this.state.thu}>
 					Thu
 				</ToggleButton>
-				<ToggleButton id="4" name="fri" value="check" onClick={this.setSelected} selected={this.state.fri}>
+				<ToggleButton id="5" name="fri" value="check" onClick={this.setSelected} selected={this.state.fri}>
 					Fri
 				</ToggleButton>
-				<ToggleButton id="5" name="sat" value="check" onClick={this.setSelected} selected={this.state.sat}>
+				<ToggleButton id="6" name="sat" value="check" onClick={this.setSelected} selected={this.state.sat}>
 					Sat
 				</ToggleButton>
-				<ToggleButton id="6" name="sun" value="check" onClick={this.setSelected} selected={this.state.sun}>
+				<ToggleButton id="0" name="sun" value="check" onClick={this.setSelected} selected={this.state.sun}>
 					Sun
 				</ToggleButton>
 			</div>
