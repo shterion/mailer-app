@@ -1,0 +1,96 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "This is a mailer app API",
+    "version": "0.0.1",
+    "title": "Mailer",
+    "contact": {
+      "email": "shterion.yanev@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "tags": [
+    {
+      "name": "emails",
+      "description": "Emails management"
+    }
+  ],
+  "paths": {
+    "/emails": {
+      "post": {
+        "x-swagger-router-controller": "email",
+        "tags": [
+          "emails"
+        ],
+        "summary": "Create email",
+        "description": "Create an email object",
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/addEmail"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Data is invalid"
+          },
+          "500": {
+            "description": "Internal error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/addEmail"
+              }
+            }
+          },
+          "description": "",
+          "required": true
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000/api/v1"
+    },
+    {
+      "url": "https://email-scheduler-app.herokuapp.com//api/v1"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "addEmail": {
+        "type": "object",
+        "properties": {
+          "recipient": {
+            "type": "string",
+            "example": "shterion.yanev@gmail.com"
+          },
+          "text": {
+            "type": "string",
+            "example": "Some content here"
+          },
+          "date": {
+            "type": "date-time",
+            "example": "2019-10-19T20:32:28Z"
+          },
+          "now": {
+            "type": "boolean",
+            "example": "false"
+          }
+        }
+      }
+    }
+  }
+}

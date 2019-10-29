@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - '10'
+dist: trusty
+sudo: required
+before_script:
+  - npm install -g eslint
+  - npm install --no-optional
+cache:
+  directories:
+  - node_modules
+env:
+  - NODE_ENV=ci
+script:
+  - sleep 5
+  - npm run test
+deploy:
+  provider: heroku
+  api_key:
+    secure: ZiJTL1qUAFoR7Ex7Q4zDSOg72fTncpsOedSw+/+/zgHgkVqnsC6WWDc8w4EjG5AZN4rexJrlZ8P8QrKsn1bwnsrd4Qi0t0mFY7sx/93Cz6KA/+F4FPeN9ZHfmdO6C5kavAg6uKznWtFGnueAdwxqMbD/RMs/SiSDUL2xLBB+rnDMznNcD9rLa/x42BOimO4NEUh5uKvac0B379MvNzpQboGInb4KIO2NvKfg9OgnxaAgURA2QvgjCxyBydJ7QILm3HnryYfAMnpDTsRZ/+/Xemepci+/jNPGGt/iYbU+Bv0Sx2AjdCvD+B41VGJcmmye2D8F0vQRJGqOr10B4yDB8dxIQmvpkLsv3eS6nkGliBvNMJQpzbXxLv2kailcCPNLTiL+M/41Oxvsd/bRMIjkV98RxIlIjfd0Fu4HgBFQMagVssxaB4z+BByswI0o/4lBz6f3JmzHMkqzhFwVdxas1xJV5QoM0F99sTnvYUMLN4wGb2cJaxZN/9OzmYJIyf3xHIjMP0E/2Q4BdAp+ZM60D4lOdrV619UrwEMyPHbY5zE+eQRqSXWiDBcFsB7i0rKZ8bOQuOstIzj25VQep/46Ow3HUHgVTTfIrijP8I6cYHiRDqCGu71djYVu/3hi2fC1eSzDvJhL2HxwXsd2OEaMxC00FiOVueBLZpq2lP0Io1U=
+  app: email-scheduler-app
+  skip_cleanup: true
