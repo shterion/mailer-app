@@ -1,22 +1,22 @@
 language: node_js
 node_js:
-  - '10'
+- '10'
 dist: trusty
 sudo: required
 before_script:
-  - npm install -g eslint
-  - npm install --no-optional
+- npm install -g eslint
+- npm install --no-optional
 cache:
   directories:
   - node_modules
 env:
-  - NODE_ENV=ci
+- NODE_ENV=ci
 script:
-  - sleep 5
-  - npm run test
+- sleep 5
+- npm run test
 deploy:
   provider: heroku
   api_key:
-    secure: ZiJTL1qUAFoR7Ex7Q4zDSOg72fTncpsOedSw+/+/zgHgkVqnsC6WWDc8w4EjG5AZN4rexJrlZ8P8QrKsn1bwnsrd4Qi0t0mFY7sx/93Cz6KA/+F4FPeN9ZHfmdO6C5kavAg6uKznWtFGnueAdwxqMbD/RMs/SiSDUL2xLBB+rnDMznNcD9rLa/x42BOimO4NEUh5uKvac0B379MvNzpQboGInb4KIO2NvKfg9OgnxaAgURA2QvgjCxyBydJ7QILm3HnryYfAMnpDTsRZ/+/Xemepci+/jNPGGt/iYbU+Bv0Sx2AjdCvD+B41VGJcmmye2D8F0vQRJGqOr10B4yDB8dxIQmvpkLsv3eS6nkGliBvNMJQpzbXxLv2kailcCPNLTiL+M/41Oxvsd/bRMIjkV98RxIlIjfd0Fu4HgBFQMagVssxaB4z+BByswI0o/4lBz6f3JmzHMkqzhFwVdxas1xJV5QoM0F99sTnvYUMLN4wGb2cJaxZN/9OzmYJIyf3xHIjMP0E/2Q4BdAp+ZM60D4lOdrV619UrwEMyPHbY5zE+eQRqSXWiDBcFsB7i0rKZ8bOQuOstIzj25VQep/46Ow3HUHgVTTfIrijP8I6cYHiRDqCGu71djYVu/3hi2fC1eSzDvJhL2HxwXsd2OEaMxC00FiOVueBLZpq2lP0Io1U=
-  app: email-scheduler-app
+    secure: gie4RkWlLbeRKToDSGTbO4cQQeh1jtTS9ANeJe531D2Q2KYu7VIb4uf0Z+kmVcxFI5G4TBEIfTNPlrUj3HyGtyhr4AFIB5ePiOaO0xcsdHvWywLxdUeBEHJCHlHDT9Pdgg9QDe9MTlJM5z80VWTCmE+LIJyczsXIFfmyA0cmitMXN/1Ngyr/3MNbIb4Keb7mISxkW/ZjdqKoo799BHY44Ft+9zNGIbOMFFVowFwtZF5PoKWZE2CPIhTau86eyFmErubwcPoU93OopT9lSIedcUhGUyxiHzWjZltATdwpEXmSbMkIb3008CY/dB++9m7dZ/U4HdpXMUZGzYgApXM3riiORLDjp3oKVGY1dFQ2RISw99sF0o2l7ShlgCfcHAouQNYHDk7hiGSvBRifGL8HjlPmQ9UgkhH4BsWFZva79oomLwEMhAZDD5+R3zepQsb7Rbxit5XS23gIhBBUhPb+da7XUjBKcrP0VeDxXd/QOs9/1bc0Hh2jNTw8d0S0UhiBKBp2brrI+IUJXT8q1FUr25yPb++oLJcmOOkfUQeBJB6HcIYipq6qg97e2ITeT4/8liWkiK+y7SKU5gNoeTQsEkXsFqt8MJxVxDNTdx4WK5n5nLcJIhU6AEl0wh4XtSGa50iM0H5muvYqZmjSe+DxPExxxt5UY4ytGN6nI7YIUAg=
+  app: mailer-scheduler-worker
   skip_cleanup: true
