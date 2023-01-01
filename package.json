@@ -21,7 +21,7 @@
     "bunyan": "^1.8.12",
     "bunyan-format": "^0.2.1",
     "concurrently": "^4.0.1",
-    "config": "^2.0.1",
+    "config": "^3.3.8",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
